@@ -81,23 +81,54 @@ body {
     z-index: 20;
 }
 
-.bullet-list {
+.bullet-text {
     position: absolute;
+    width: 419px;
+    height: 120px;
+    left: 657px;
     top: 464px;
-    left: 620px;
-    width: 456px;
     z-index: 20;
-    font-size: 20px;
+
+    font-family: 'Rounded Mplus 1c', sans-serif;
     font-weight: 400;
+    font-size: 20px;
     line-height: 200%;
+    text-transform: capitalize;
     color: #171C1B;
 }
 
-.bullet-row {
+.checkmark {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    z-index: 20;
+
     display: flex;
     align-items: center;
-    gap: 18px;
-    height: 40px;
+    justify-content: center;
+
+    background: #0A4739;
+    color: white;
+    border-radius: 106px 0 106px 106px;
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.check-1 {
+    left: 620px;
+    top: 474px;
+}
+
+.check-2 {
+    left: 620px;
+    top: 514px;
+}
+
+.check-3 {
+    left: 620px;
+    top: 554px;
 }
 
 .checkmark {
