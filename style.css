@@ -5,7 +5,7 @@
 body {
     margin: 0;
     background: white;
-    font-family: 'Rounded Mplus 1c', sans-serif;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .hero {
@@ -83,17 +83,15 @@ body {
 
 .bullet-text {
     position: absolute;
-    width: 419px;
+    width: 450px; /* היה 419 */
     height: 120px;
     left: 657px;
     top: 464px;
-    z-index: 20;
 
-    font-family: 'Rounded Mplus 1c', sans-serif;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 200%;
-    text-transform: capitalize;
+    font-size: 21px;
+    line-height: 190%;
     color: #171C1B;
 }
 
