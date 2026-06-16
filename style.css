@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: white;
+    font-family: 'Rounded Mplus 1c', sans-serif;
+}
+
+.hero {
+    position: relative;
+    width: 1248px;
+    height: 850px;
+    margin: auto;
+}
+
+.hero-background {
+    position: absolute;
+    top: 210px;
+    left: 47px;
+    width: 1154px;
+    height: 504px;
+    background: linear-gradient(
+            73deg,
+            #0F8A6B 29%,
+            #B3E6D9 46%,
+            #D9F2ED 100%
+    );
+    border-radius: 281px 0 281px 281px;
+}
+
+.rmot-background {
+    position: absolute;
+    top: 136px;
+    left: 452px;
+    width: 690px;
+    height: 161px;
+    background: #0F8A6B;
+    border-radius: 281px 0 80px 281px;
+}
+
+.carmit-image {
+    position: absolute;
+    top: -15px;
+    left: 61px;
+    width: 482px;
+    z-index: 10;
+}
+
+.rmot-subtitle {
+    position: absolute;
+    top: 248px;
+    left: 544px;
+    font-size: 18px;
+    color: white;
+    z-index: 20;
+}
+
+.rmot-title {
+    position: absolute;
+    top: 147px;
+    left: 537px;
+    margin: 0;
+    font-size: 80px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+    z-index: 20;
+}
+
+.main-title {
+    position: absolute;
+    top: 331px;
+    left: 616px;
+    width: 422px;
+    margin: 0;
+    font-size: 36px;
+    font-weight: 800;
+    color: #033025;
+    z-index: 20;
+}
+
+.bullet-list {
+    position: absolute;
+    top: 464px;
+    left: 620px;
+    width: 456px;
+    z-index: 20;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 200%;
+    color: #171C1B;
+}
+
+.bullet-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 40px;
+}
+
+.checkmark {
+    width: 19px;
+    height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 19px;
+    background: #0A4739;
+    color: white;
+    border-radius: 106px 0 106px 106px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.contact-button {
+    position: absolute;
+    top: 611px;
+    left: 620px;
+    width: 234px;
+    height: 49px;
+    border: none;
+    cursor: pointer;
+    background: #085E48;
+    color: white;
+    border-radius: 281px 0 80px 281px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    z-index: 20;
+}
+
+.carmit-card {
+    position: absolute;
+    top: 620px;
+    left: 53px;
+    width: 493px;
+    height: 161px;
+    padding: 16px 50px;
+    background: #0F8A6B;
+    color: white;
+    border-radius: 281px 0 80px 281px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    z-index: 30;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 150%;
+}
+
+.card-text {
+    margin-top: 4px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+}
