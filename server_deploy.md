@@ -144,6 +144,14 @@ cp wp-config-sample.php wp-config.php
 vim wp-config.php
 ```
 
+> define( 'DB_NAME', 'wordpress_db' );
+
+> define( 'DB_USER', 'wordpress_user' );
+
+> define( 'DB_PASSWORD', 'password' );
+
+> define( 'DB_HOST', 'localhost' );
+
 ## Create Apache Virtual Host
 
 ```bash
