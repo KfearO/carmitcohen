@@ -264,7 +264,7 @@ sudo tail -n 50 /var/log/apache2/carmitc_error.log
 sudo tail -n 80 /var/log/apache2/error.log
 ```
 
-### 6.4 Create Temporary PHP Test File
+### 6.4 Create a Temporary PHP Test File
 
 ```bash
 echo "<?php phpinfo();" | sudo tee /var/www/carmitcohen/info.php
