@@ -338,7 +338,6 @@ Use one installation method only on the server.
 Recommended practical path on this server type:
 
 ```bash
-sudo apt update
 sudo apt install -y certbot python3-certbot-dns-cloudflare
 ```
 
