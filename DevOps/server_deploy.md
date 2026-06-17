@@ -509,16 +509,3 @@ mariadb -u wordpress_user -p wordpress_db
 ```sql
 SHOW TABLES;
 ```
-
-## 10. Current Status
-
-- Debian 12 ARM64
-- Apache installed and running
-- PHP installed
-- MariaDB installed and running
-- WordPress installed manually
-- Apache Virtual Host configured
-- Local HTTP behavior verified with `curl` using the target `Host` header
-- Development environment is expected to behave as close to production as practical
-- Cloudflare and HTTPS should be treated as first-class parts of the deployment flow
-- WordPress GUI installation must be completed and verified on each fresh environment
