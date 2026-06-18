@@ -1,6 +1,13 @@
 
 # WordPress + Elementor + Figma Playbook
 
+# Scope
+
+This document is not a record of a specific project.
+It is a collection of principles, patterns and lessons learned from real projects.
+The goal is to improve consistency, maintainability and client editability while staying as close as possible to the original Figma design.
+This playbook should evolve over time.
+
 ## Goal
 
 Build websites from Figma using WordPress + Elementor while maximizing maintainability for non-technical clients and minimizing custom CSS.
@@ -18,24 +25,23 @@ Prefer:
 5. CSS as a last resort.
 
 Never start with CSS.
-
 The goal is not merely to reproduce the Figma design.
-
 The goal is to create a maintainable website that clients can edit themselves.
 
 ---
 
-# POC Result
+# Success Criteria
 
-Final result:
+Aim for the closest possible result to the Figma design.
+Do not introduce visible differences unless there is a clear technical reason.
+Success means:
 
-```
+* Visually as close as possible to the design.
+* Editable by the client.
+* Zero CSS when possible; otherwise the minimum necessary CSS.
+* Maintainable structure.
 
-0 lines of CSS
-
-```
-
-This was achieved without compromising the design.
+Small typography differences between Figma and browsers can happen, but they should be treated as something to verify, not as a default excuse.
 
 ---
 
@@ -56,6 +62,62 @@ Good mindset:
 - Flexbox.
 - Space Between.
 - Logical structure.
+
+---
+
+# Elementor Versions Evolve
+
+Elementor UI changes between versions.
+
+Do not rely on the exact location of controls.
+
+Prefer understanding concepts:
+
+```
+Page Layout
+Container hierarchy
+Flexbox
+Spacing
+Theme interaction
+```
+
+rather than memorizing specific buttons or icons.
+
+Examples:
+
+* Settings panels may move.
+* Some controls may disappear.
+* New UI versions can replace old workflows.
+
+Always verify the current Elementor interface before assuming a feature no longer exists.
+
+---
+
+# Simplify Content Before Adding Complexity
+
+Sometimes changing content is better than adding structure.
+
+Bad:
+
+```
+Extra containers
+Min heights
+Special CSS
+```
+
+Good:
+
+```
+IKEBANA DEMO
+```
+
+instead of:
+
+```
+IKEBANA DEMONSTRATION
+```
+
+Prefer simpler content over more technical complexity.
 
 ---
 
@@ -138,6 +200,22 @@ Typography
 
 inside Elementor.
 
+If:
+
+* Font family matches.
+* Font weight matches.
+* Size matches.
+* Line height matches.
+* Chrome reports the expected rendered font.
+
+Then remaining differences are usually rendering-engine differences.
+
+Do not jump to CSS hacks.
+
+First verify that the browser is rendering the correct font with the correct settings.
+
+If a difference remains after that, document it clearly before deciding to accept it.
+
 ---
 
 # Widths
@@ -152,7 +230,19 @@ Bad:
 }
 ```
 
-Prefer Elementor controls.
+Good:
+
+```
+Elementor controls
+↓
+Position
+↓
+Stretch
+```
+
+Do not assume that Custom Width affects the element you actually want.
+Widget width and content width are not always the same.
+Explore Elementor controls before introducing CSS.
 
 ---
 
@@ -200,6 +290,28 @@ upper-area
 ```
 
 This allows the button to remain at the bottom while keeping the text grouped correctly.
+
+---
+
+# Remove Containers Aggressively
+
+Containers used only for spacing should be questioned.
+
+Example:
+
+```
+title-area
+```
+
+was removed completely.
+
+Spacing was restored using Elementor controls.
+
+Fewer containers usually mean:
+
+* Better alignment.
+* Less CSS.
+* Easier maintenance.
 
 ---
 
@@ -261,6 +373,64 @@ Before writing CSS ask:
 4. Can SVG solve it?
 
 Only then write CSS.
+
+---
+
+# Backup Strategy
+
+Before experimenting:
+
+1. Export Elementor templates.
+2. Save custom CSS.
+3. Commit to Git.
+
+For simple projects with no dynamic data, database backups are optional.
+
+---
+
+# Elementor Warning
+
+Do not use:
+
+```
+Back to WordPress Editor
+```
+
+on Elementor-built pages.
+
+If problems occur:
+
+```
+Elementor
+    → History
+    → Revisions
+```
+
+can usually restore the page.
+
+---
+
+# One More Principle
+
+When solving a visual problem, preserve the design first.
+
+Only change the design when the technical cost is clearly unjustified and the tradeoff is deliberate.
+
+Prefer:
+
+```
+Simpler content
+↓
+Better structure
+↓
+Additional containers
+↓
+SVG assets
+↓
+CSS
+```
+
+rather than the opposite.
 
 ---
 
