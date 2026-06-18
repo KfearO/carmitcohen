@@ -237,11 +237,8 @@ If:
 * Chrome reports the expected rendered font.
 
 Then remaining differences are usually rendering-engine differences.
-
 Do not jump to CSS hacks.
-
-First verify that the browser is rendering the correct font with the correct settings.
-
+First, verify that the browser is rendering the correct font with the correct settings.
 If a difference remains after that, document it clearly before deciding to accept it.
 
 ---
@@ -301,7 +298,6 @@ This makes "Space Between" unusable.
 ```
 service-card
 ├── upper-area
-│
 │   ├── background-area
 │   └── content-area
 │
@@ -334,7 +330,7 @@ Example:
 title-area
 ```
 
-was removed completely.
+it was removed completely.
 
 Spacing was restored using Elementor controls.
 
@@ -346,7 +342,7 @@ Fewer containers usually mean:
 
 ---
 
-# Padding vs Margin
+# Padding vs. Margin
 
 Prefer:
 
@@ -383,11 +379,9 @@ while the surrounding layout remains Flexbox-based.
 Space Between is powerful.
 
 If it breaks the layout:
-
 Do not immediately use CSS.
 
 First ask:
-
 > Do I need another container?
 
 Very often the answer is yes.
@@ -444,7 +438,6 @@ can usually restore the page.
 # One More Principle
 
 When solving a visual problem, preserve the design first.
-
 Only change the design when the technical cost is clearly unjustified and the tradeoff is deliberate.
 
 Prefer:
@@ -468,7 +461,4 @@ rather than the opposite.
 # Key Lesson
 
 When Elementor appears to require CSS, the real problem is often the container hierarchy.
-
 Good structure beats custom CSS.
-
-
