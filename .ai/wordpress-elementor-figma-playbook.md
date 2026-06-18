@@ -16,6 +16,34 @@ Build websites from Figma using WordPress + Elementor while maximizing maintaina
 
 # Philosophy
 
+## Documentation Philosophy
+
+Do not document values.
+Document patterns.
+Values are temporary.
+Patterns are reusable.
+
+Bad:
+```
+Button width = 230px
+Top padding = 60px
+```
+
+Good:
+
+```
+Use Elementor controls.
+Prefer structure over CSS.
+Think in containers.
+Prefer SVG over CSS shapes.
+```
+
+The purpose of this playbook is not to preserve implementation details.
+
+The purpose is to preserve principles and patterns that remain useful across projects.
+
+---
+
 Prefer:
 
 1. Elementor settings.
@@ -239,6 +267,9 @@ Position
 ↓
 Stretch
 ```
+
+This is a pattern example, not a value to memorize.
+Document the decision path, not the specific numeric value.
 
 Do not assume that Custom Width affects the element you actually want.
 Widget width and content width are not always the same.
